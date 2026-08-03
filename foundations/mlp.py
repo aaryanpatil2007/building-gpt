@@ -10,11 +10,6 @@ class Solution:
             currans = currans @ weights[i] + biases[i]
             if i != len(weights) - 1:
                 currans = np.maximum(0.0, currans)
-        
-        # x: 1D input array
-        # weights: list of 2D weight matrices
-        # biases: list of 1D bias vectors
-        # Apply ReLU after each hidden layer, no activation on output layer
-        # return np.round(your_answer, 5)
+      
         return np.round(currans, 5)
         
